@@ -7,6 +7,10 @@ int main(int argc, char **argv) {
 	if (argc == 1) {
 		char c;
 		while ((c = getchar()) != EOF) {
+			if (c == '\t') {
+				printf("        ");
+				continue;
+			}
 			printf("%c", c);
 		}
 	}
@@ -23,7 +27,7 @@ int main(int argc, char **argv) {
 			if (feof(fp))
 				break;
 			if (c == '\t') {
-				printf("    ");
+				printf("        ");
 				continue;
 			}
 
