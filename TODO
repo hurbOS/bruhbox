@@ -1,0 +1,6 @@
+functionalize these coreutils - too much repeated code
+
+add structs to deal with command line arguments rather
+than manually looping thru strings
+
+get better at C
