@@ -3,4 +3,6 @@ functionalize these coreutils - too much repeated code
 add structs to deal with command line arguments rather
 than manually looping thru strings
 
+rewrite gnu headers and eliminate dependence on stallman
+
 get better at C
