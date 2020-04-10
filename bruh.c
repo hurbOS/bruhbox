@@ -1,10 +1,14 @@
 #include <stdio.h>
-
-int main(int argc, char *argv[]) {
-	char *bruh = "bruh\n";
-	while (1)
-		printf("%s", bruh); //infinite loop, as is standard for yes
-	
-	/* gnu yes is fucking crazy, it utilizes caching to minimize io bottlenecking and it can print 5.5gb of yesses in a second. arguably superior than dd if=/dev/zero for wiping drives lol */
-	return 0;
+#include <stdlib.h>
+#include <string.h>
+ int main() {
+    char bruh[5] = "bruh\n";
+    char *buf = malloc(16384);
+    int bufused = 0;
+    while (bufused < 16384) {
+        memcpy(buf+bufused, bruh, 5);
+        bufused += 5;
+    }
+    while (write(1, buf, 16384));
+    return 1;
 }
