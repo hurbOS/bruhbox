@@ -2,7 +2,6 @@
 #include <stdlib.h>
 
 int main(int argc, char **argv) {
-	int i;
 	FILE *fp;
 	if (argc == 1) {
 		char c;
@@ -11,7 +10,7 @@ int main(int argc, char **argv) {
 		}
 	}
 	else {
-		for (i = 1; i < argc; i++) {
+		for (int i = 1; i < argc; i++) {
 			fp = fopen(argv[i], "r");
 			if (fp == NULL) {
 				printf("cat: %s: No such file, dumbass.", argv[i]);
